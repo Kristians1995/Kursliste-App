@@ -10,15 +10,17 @@ Project _$ProjectFromJson(Map<String, dynamic> json) => Project(
   id: json['id'] as String,
   customerName: json['customerName'] as String,
   lastModified: DateTime.parse(json['lastModified'] as String),
-  status: json['status'] as String,
-  fordelingstype: json['fordelingstype'] as String,
-  systemspenning: json['systemspenning'] as String,
-  jordElektrodeType: json['jordElektrodeType'] as String,
-  jordElektrodeSted: json['jordElektrodeSted'] as String,
-  kortslutningsverdier: json['kortslutningsverdier'] as String,
-  courses: (json['courses'] as List<dynamic>)
-      .map((e) => Course.fromJson(e as Map<String, dynamic>))
-      .toList(),
+  status: json['status'] as String? ?? 'Ikke påbegynt',
+  fordelingstype: json['fordelingstype'] as String? ?? '',
+  systemspenning: json['systemspenning'] as String? ?? '',
+  jordElektrodeType: json['jordElektrodeType'] as String? ?? '',
+  jordElektrodeSted: json['jordElektrodeSted'] as String? ?? '',
+  kortslutningsverdier: json['kortslutningsverdier'] as String? ?? '',
+  courses:
+      (json['courses'] as List<dynamic>?)
+          ?.map((e) => Course.fromJson(e as Map<String, dynamic>))
+          .toList() ??
+      const [],
 );
 
 Map<String, dynamic> _$ProjectToJson(Project instance) => <String, dynamic>{
