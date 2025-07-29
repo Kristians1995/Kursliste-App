@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.kursliste_app"
+    namespace = "com.mr.flutter.plugin.filepicker"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 

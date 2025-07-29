@@ -36,11 +36,11 @@ dependencies:
   cupertino_icons: ^1.0.8
   json_annotation: ^4.8.0
   shared_preferences: ^2.0.15
-  share_plus: ^6.3.0
-  file_picker: ^5.2.4
+  # share_plus: ^11.0.0  # plugin disabled until namespaces fixed
+  # file_picker: ^10.2.0  # plugin disabled until namespaces fixed
   archive: ^3.3.4
   pdf: ^3.10.0
-  printing: ^5.10.0
+  # printing: ^5.10.0  # temporarily disabled
 
 dev_dependencies:
   flutter_test:
@@ -96,3 +96,8 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/to/font-from-package
+
+ # No local overrides needed; use pub.dev package for file_picker
+ # dependency_overrides:
+ #   file_picker:
+ #     path: plugins/file_picker
